@@ -27,13 +27,13 @@ def main():
         asnwer = input("Do you want to draw a pokemon? (y/n)\n")
         if asnwer == "yes" or asnwer == "y":
             pokemon_json = get_pokemon()
-            print(f"Detailes for {pokemon_json["name"]}:")
-            print(f"Ability: {pokemon_json["abilities"][0]["ability"]["name"]}")
-            print(f"Move: {pokemon_json['moves'][0]['move']['name']}")
+            print("Detailes for" + pokemon_json["name"] + " :")
+            print("Ability: " + pokemon_json["abilities"][0]["ability"]["name"])
+            print("Move: " + pokemon_json['moves'][0]['move']['name'])
             if pokemon_json['sprites']['back_default'] is None:
                 print("No picture of back was found.")
             else:
-                print(f"Picture of back: {pokemon_json['sprites']['back_default']}")
+                print("Picture of back: " + pokemon_json['sprites']['back_default'])
         elif asnwer == "no" or asnwer == "n":
             exit("Farewell!")
         else:
